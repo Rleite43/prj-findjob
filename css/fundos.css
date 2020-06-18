@@ -1,0 +1,44 @@
+#fundoform {
+    background: url("../img/bg-masthead.jpg");
+}
+
+#imgLogin {
+    background: url("../img/executive.jpg");
+}
+
+element.style {
+    background-image: url(img/author.jpg);
+}
+
+#fontsHome {
+    color: aliceblue;
+}
+
+.hero-wrap .text .img {
+    width: 200px;
+    height: 200px;
+    margin: 0 auto;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    border-radius: 50%;
+}
+
+.hero-wrap,
+.img,
+.blog-img,
+.user-img {
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+.hero-wrap .text {
+    z-index: 1;
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.text-center {
+    text-align: center !important;
+}

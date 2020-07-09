@@ -19,11 +19,13 @@
     <link href="css/sb-admin-2.min.css" rel="stylesheet">
     <link href="css/fundos.css" rel="stylesheet">
 
-
-
 </head>
 
 <body class="bg-gradient-primary">
+
+    <script src="js/jquery.js"></script>
+    <script src="js/verificalogin.js"></script>
+    <script src="js/login.js"></script>
 
     <div class="container">
 
@@ -42,23 +44,13 @@
                                     <div class="text-center">
                                         <h1 class="h4 text-gray-900 mb-4">Welcome Back!</h1>
                                     </div>
-                                    <div class="form-group">
-                                        <div class="btn-group btn-group-toggle col-xs-12 col-sm-12 col-md-12 col-lg-12" data-toggle="buttons">
-                                            <label class="btn btn-secondary active">
-                                          <input type="radio" name="options" id="option1" autocomplete="off" checked> People
-                                        </label>
-                                            <label class="btn btn-secondary">
-                                          <input type="radio" name="options" id="option2" autocomplete="off"> Company
-                                        </label>
-                                        </div>
-                                        <hr class="sidebar-divider">
-                                    </div>
-                                    <form class="user">
+                                    <form class="user" method="POST">
+    
                                         <div class="form-group">
-                                            <input type="email" class="form-control form-control-user" id="exampleInputEmail" aria-describedby="emailHelp" placeholder="Enter Email Address..." required>
+                                            <input type="email" class="form-control form-control-user" name="email" aria-describedby="emailHelp" placeholder="Enter Email Address..." required>
                                         </div>
                                         <div class="form-group">
-                                            <input type="password" class="form-control form-control-user" id="exampleInputPassword" placeholder="Password" required>
+                                            <input type="password" class="form-control form-control-user" name="senha" placeholder="Password" required>
                                         </div>
                                         <div class="form-group">
                                             <div class="custom-control custom-checkbox small">

@@ -26,8 +26,8 @@
 
 <body id="page-top">
     <script src="js/jquery.js"></script>
-    <script src="js/naologin.js"></script>
-    <script src="js/info.js"></script>
+    <!--<script src="js/naologin.js"></script>-->
+    <script src="js/curriculo.js"></script>
     <!-- Page Wrapper -->
     <div id="wrapper">
 
@@ -133,77 +133,34 @@
 
                         <div class="form-group rounded">
                             <label for="exampleFormControlInput1">Formation</label>
-                            <input type="text" class="form-control" name="descri">
+                            <input type="text" class="form-control" id="formacao" name="descri">
                         </div>
                         
                         <hr class="Divider">
-                        <div class="form-group col-3">
+                        <div class="form-group col-3" id="skills">
                             <label for="exampleFormControlSelect2 col-8">Skills</label>
-                            <div class="form-check">
-                                <input class="form-check-input" name = "skills" type="checkbox" value="1" id="l1">
-                                <label class="form-check-label" for="defaultCheck1">
-                                Front-end
-                              </label>
-                            </div>
-
-                            <div class="form-check">
-                                <input class="form-check-input" name = "skills" type="checkbox" value="2" id="l2">
-                                <label class="form-check-label" for="defaultCheck2">
-                                Back-end
-                              </label>
-                            </div>
-
-                            <div class="form-check">
-                                <input class="form-check-input" name = "skills" type="checkbox" value="3" id="l3">
-                                <label class="form-check-label" for="defaultCheck2">
-                                Java
-                              </label>
-                            </div>
-                            <div class="form-check">
-                                <input class="form-check-input" name = "skills" type="checkbox" value="4" id="l4">
-                                <label class="form-check-label" for="defaultCheck2">
-                                C
-                              </label>
-                            </div>
-                            <div class="form-check">
-                                <input class="form-check-input" name = "skills" type="checkbox" value="5" id="l5">
-                                <label class="form-check-label" for="defaultCheck2">
-                                C#
-                              </label>
-                            </div>
-                            <div class="form-check">
-                                <input class="form-check-input" name = "skills" type="checkbox" value="6" id="l6">
-                                <label class="form-check-label" for="defaultCheck2">
-                                MySQL
-                              </label>
-                            </div>
                         </div>
                         <hr class="Divider">
                         <div class="form-group">
-                            <label for="exampleFormControlSelect2">Job search</label>
-                            <select multiple class="form-control" name="pref">
-                              <option value="frontend">Front-end</option>
-                              <option value="backend">Back-end</option>
-                              <option value="java">Java</option>
-                              <option value="c">C</option>
-                              <option value="c#">C#</option>
-                              <option value="mysql">MySQL</option>
-                        </select>
+                            <label for="objetivo">Objetivo</label>
+                            <input type='text' name="objetivo" id="objetivo" class="form-control"  id="objetivo">
+                            
                         </div>
                         <hr class="Divider">
                         <div class="form-group">
                             <label for="exampleFormControlTextarea1">Professional experiences</label>
-                            <textarea class="form-control" name="exp" rows="3"></textarea>
+                            <textarea class="form-control" name="exp" id="experiencia" rows="3"></textarea>
                         </div>
                         <hr class="Divider">
                         <div class="form-group">
                             <label for="exampleFormControlTextarea1">More about you</label>
-                            <textarea class="form-control" name="more" rows="3"></textarea>
+                            <textarea class="form-control" name="more" id="mais_info" rows="3"></textarea>
                         </div>
                         <hr class="Divider">
                         <div class="form-group">
                             <label class="col-md-3 control-label"></label>
                             <div class="col-md-8">
+                                <input type="hidden" id="curriculo_id" value="">
                                 <input type="submit" class="btn btn-primary" value="Save Changes">
                                 <span></span>
                                 <input type="reset" class="btn btn-default" value="Cancel">

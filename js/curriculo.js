@@ -12,7 +12,7 @@ function getData(data){
         const dados = {
             'formacao':dado[0].value,
             'objetivo':dado[1].value,
-            'experiencia_profissional':dado[2].value,
+            'experiencia':dado[2].value,
             'informacao_extra':dado[3].value,
             'skills':skills
         }
@@ -78,7 +78,10 @@ $(document).ready(function (){
             headers:{
                 "Content-Type":"application/json"
             },
-            data:JSON.stringify(dados)
+            data:JSON.stringify(dados),
+            success: function(){
+                alert("Dados atualizados com sucesso!")
+            }
         })
     })
 })

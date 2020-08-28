@@ -13,7 +13,9 @@
 
     <!-- Custom fonts for this template-->
     <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
-    <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"
+        rel="stylesheet">
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
     <script src="js/navbar.js"></script>
@@ -26,6 +28,8 @@
 
 <body id="page-top">
     <!-- Page Wrapper -->
+    <script src="js/jquery.js"></script>
+    <script src="js/edit.js"></script>
     <div id="wrapper">
 
         <!-- Sidebar -->
@@ -130,10 +134,8 @@
                                     <!-- left column -->
                                     <div class="col-md-3">
                                         <div class="text-center">
-                                            <img src="img/author.jpg" class="avatar rounded-circle img-thumbnail" alt="avatar">
-
-
-                                            <input type="file" class="form-control">
+                                            <img src="img/author.jpg" id="userPic" class="avatar rounded-circle img-thumbnail"
+                                                alt="avatar">
                                         </div>
                                     </div>
 
@@ -141,102 +143,102 @@
                                     <div class="col-md-9 personal-info">
                                         <h3>Personal info</h3>
 
-                                        <form class="form-horizontal" role="form">
-                                        
+                                        <form class="form-horizontal" role="form" enctype="multipart/form-data">
                                             <hr class="Divider">
+                                            <div class="form-group">
+                                            <label class="col-lg-3 control-label">Foto de perfil</label>
+                                            <input type="file" id="file" name="profile_pic" class="form-control">
+</                                          </div>
                                             <div class="form-group">
                                                 <label class="col-lg-3 control-label">New password</label>
                                                 <div class="col-lg-8">
-                                                    <input class="input--style-3" type="password" id="pass" placeholder="Password">
+                                                    <input class="input--style-3" type="password" name="senha" id="pass"
+                                                        placeholder="Password">
                                                 </div>
                                             </div>
                                             <hr class="Divider">
                                             <div class="form-group">
                                                 <label class="col-lg-6 control-label">Confirm new password</label>
                                                 <div class="col-lg-8">
-                                                    <input class="input--style-3" type="password" id="pass" placeholder="Password">
+                                                    <input class="input--style-3" type="password" name="resenha"
+                                                        id="repass" placeholder="Password">
                                                 </div>
                                             </div>
                                             <hr class="Divider">
                                             <div class="form-group">
                                                 <label class="col-lg-3 control-label">Selecione seu estado</label>
                                                 <div class="col-lg-6"></div>
-                                                <select name="estados-brasil">
-                              <option value="AC">Acre</option>
-                              <option value="AL">Alagoas</option>
-                              <option value="AP">Amapá</option>
-                              <option value="AM">Amazonas</option>
-                              <option value="BA">Bahia</option>
-                              <option value="CE">Ceará</option>
-                              <option value="DF">Distrito Federal</option>
-                              <option value="ES">Espírito Santo</option>
-                              <option value="GO">Goiás</option>
-                              <option value="MA">Maranhão</option>
-                              <option value="MT">Mato Grosso</option>
-                              <option value="MS">Mato Grosso do Sul</option>
-                              <option value="MG">Minas Gerais</option>
-                              <option value="PA">Pará</option>
-                              <option value="PB">Paraíba</option>
-                              <option value="PR">Paraná</option>
-                              <option value="PE">Pernambuco</option>
-                              <option value="PI">Piauí</option>
-                              <option value="RJ">Rio de Janeiro</option>
-                              <option value="RN">Rio Grande do Norte</option>
-                              <option value="RS">Rio Grande do Sul</option>
-                              <option value="RO">Rondônia</option>
-                              <option value="RR">Roraima</option>
-                              <option value="SC">Santa Catarina</option>
-                              <option value="SP">São Paulo</option>
-                              <option value="SE">Sergipe</option>
-                              <option value="TO">Tocantins</option>
-                          </select>
+                                                <select name="uf" id="uf">
+                                                    <option value="AC">Acre</option>
+                                                    <option value="AL">Alagoas</option>
+                                                    <option value="AP">Amapá</option>
+                                                    <option value="AM">Amazonas</option>
+                                                    <option value="BA">Bahia</option>
+                                                    <option value="CE">Ceará</option>
+                                                    <option value="DF">Distrito Federal</option>
+                                                    <option value="ES">Espírito Santo</option>
+                                                    <option value="GO">Goiás</option>
+                                                    <option value="MA">Maranhão</option>
+                                                    <option value="MT">Mato Grosso</option>
+                                                    <option value="MS">Mato Grosso do Sul</option>
+                                                    <option value="MG">Minas Gerais</option>
+                                                    <option value="PA">Pará</option>
+                                                    <option value="PB">Paraíba</option>
+                                                    <option value="PR">Paraná</option>
+                                                    <option value="PE">Pernambuco</option>
+                                                    <option value="PI">Piauí</option>
+                                                    <option value="RJ">Rio de Janeiro</option>
+                                                    <option value="RN">Rio Grande do Norte</option>
+                                                    <option value="RS">Rio Grande do Sul</option>
+                                                    <option value="RO">Rondônia</option>
+                                                    <option value="RR">Roraima</option>
+                                                    <option value="SC">Santa Catarina</option>
+                                                    <option value="SP">São Paulo</option>
+                                                    <option value="SE">Sergipe</option>
+                                                    <option value="TO">Tocantins</option>
+                                                </select>
                                                 <hr class="Divider">
                                                 <div class="form-group">
                                                     <label class="col-lg-3 control-label">City</label>
                                                     <div class="col-lg-8">
-                                                        <input class="form-control" type="text" value="">
+                                                        <input class="form-control" id="city" type="text" name="cidade" value="">
                                                     </div>
                                                 </div>
                                                 <hr class="Divider">
                                                 <div class="form-group">
                                                     <label class="col-md-3 control-label"></label>
                                                     <div class="col-md-8">
-                                                        <input type="button" class="btn btn-primary" value="Save Changes">
+                                                        <input type="submit" class="btn btn-primary"
+                                                            value="Save Changes">
                                                         <span></span>
                                                         <input type="reset" class="btn btn-default" value="Cancel">
                                                     </div>
                                                 </div>
                                         </form>
-                                        </div>
                                     </div>
                                 </div>
-
-
                             </div>
 
+
                         </div>
+
                     </div>
-                </div>
-
-                <div class="col-lg-6 mb-4">
-
                 </div>
             </div>
 
+            <div class="col-lg-6 mb-4">
+
+            </div>
         </div>
-        <!-- /.container-fluid -->
+
+    </div>
+    <!-- /.container-fluid -->
 
     </div>
     <!-- End of Main Content -->
 
     <!-- Footer -->
-    <footer class="sticky-footer bg-white">
-        <div class="container my-auto">
-            <div class="copyright text-center my-auto">
-                <span>Copyright &copy; Job Find 2020</span>
-            </div>
-        </div>
-    </footer>
+
     <!-- End of Footer -->
 
     </div>
@@ -251,14 +253,15 @@
     </a>
 
     <!-- Logout Modal-->
-    <div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
         <div class="modal-dialog" role="document">
             <div class="modal-content">
                 <div class="modal-header">
                     <h5 class="modal-title" id="exampleModalLabel">Ready to Leave?</h5>
                     <button class="close" type="button" data-dismiss="modal" aria-label="Close">
-            <span aria-hidden="true">×</span>
-          </button>
+                        <span aria-hidden="true">×</span>
+                    </button>
                 </div>
                 <div class="modal-body">Select "Logout" below if you are ready to end your current session.</div>
                 <div class="modal-footer">

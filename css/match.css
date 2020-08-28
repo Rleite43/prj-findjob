@@ -105,7 +105,9 @@
 	.active {
 	    background-color: rgba(0, 0, 0, 0.3);
 	}
-	
+	.contacts li > p{
+		margin: auto;
+	}
 	.user_img {
 	    height: 70px;
 	    width: 70px;
@@ -139,6 +141,16 @@
 	    right: 0.4em;
 	    border: 1.5px solid white;
 	}
+	.offline_icon {
+	    position: absolute;
+	    height: 15px;
+	    width: 15px;
+	    background-color: #fff;
+	    border-radius: 50%;
+	    bottom: 0.2em;
+	    right: 0.4em;
+	    border: 1.5px solid white;
+	}
 	
 	.offline {
 	    background-color: #c23616 !important;
@@ -150,16 +162,23 @@
 	    margin-left: 15px;
 	}
 	
+	.active .user_info span{
+		color: white;
+	}
+
 	.user_info span {
 	    font-size: 20px;
-	    color: white;
+		/* color: white; */
+		color: black;
 	}
 	
 	.user_info p {
 	    font-size: 10px;
-	    color: rgba(255, 255, 255, 0.6);
+	    color: rgba(170, 1	47, 147, 0.6);
 	}
-	
+	.users:hover{
+		border: 1px solid black;
+	}
 	.video_cam {
 	    margin-left: 50px;
 	    margin-top: 5px;
@@ -266,4 +285,8 @@
 	
 	#chatImg {
 	    background-image: url("../img/bg-masthead.jpg");
+	}
+
+	.person{
+		margin-bottom: 10px;
 	}

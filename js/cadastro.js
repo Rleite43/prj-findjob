@@ -25,9 +25,12 @@ $(document).ready(function() {
                 "Content-Type":"application/json"
             },
             data: JSON.stringify(data),
+            success: function(){
+                alert("usuario cadastrado com sucesso!!");
+                window.location.href = "http://localhost/prj/login.html"
+            }
             
         });
-        console.log($(this).serializeArray());
         $(this).trigger("reset");
     });
 });

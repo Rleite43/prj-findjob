@@ -1,3 +1,4 @@
+
 function getData(data){
     const skills = []
         const dado = []
@@ -69,7 +70,10 @@ $(document).ready(function (){
             headers:{
                 "Content-Type":"application/json"
             },
-            data:JSON.stringify(dados)
+            data:JSON.stringify(dados),
+            success: function(){
+                alert("Dados atualizados com sucesso!")
+            }
         })
     })
 })

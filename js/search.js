@@ -3,7 +3,6 @@ class Carousel {
     constructor(element) {
 
         this.board = element
-
         // add first two cards programmatically
         this.push()
         this.push()
@@ -55,7 +54,6 @@ class Carousel {
     }
 
     onTap(e) {
-
         // get finger position on top card
         let propX = (e.center.x - e.target.getBoundingClientRect().left) / e.target.clientWidth
 
@@ -158,11 +156,12 @@ class Carousel {
             }
 
             if (successful) {
-
+                
                 // throw card in the chosen direction
                 this.topCard.style.transform =
                     'translateX(' + posX + 'px) translateY(' + posY + 'px) rotate(' + deg + 'deg)'
                     // wait transition end
+
                 setTimeout(() => {
                     // remove swiped card
                     this.board.removeChild(this.topCard)
